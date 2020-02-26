@@ -1,6 +1,5 @@
-quelque chose
 <header>
-haut
+haut quelque chose
 </header>
 
 
