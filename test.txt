@@ -1,0 +1,14 @@
+quelque chose
+<header>
+haut
+</header>
+
+
+<body>
+corps
+</body>
+
+
+<footer>
+bas
+</footer>
