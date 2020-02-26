@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!-- TP dont le but est de crée un document XML structurant les données d'un répertoire. -->
+
+<repertoire>
+
+    <!--Antonin NIMUS-->
+    <personne sexe="M">
+        <nom>NIMUS</nom>
+        <prenom>Antonin</prenom>
+        
+        <!-- adresse contiendras la voie, son numero, code postal et la ville, avec le pays en cadeau-->
+        <adresse> 
+            <numvoie>23</numvoie>
+            <voie type="rue">rue du Tartare</voie>
+            <postal>92200</postal>
+            <ville>Paris</ville>
+            <pays>France</pays>
+        </adresse> <!-- 23 rue du tartare 92200 paris, France-->
+
+        <!-- numeros contiendras un numero fixe et portable-->
+        <numeros> </numeros>
+            <fixe>03 44 55 66 77</fixe>
+            <portable>06 70 08 90 00</portable>
+        </numeros>
+    </personne>
+        <personne sexe="F">
+        <nom>VIRE</nom>
+        <prenom>Sasha</prenom>
+
+        <adresse> 
+            <numvoie>33</numvoie>
+            <voie type="impasse">impasse du Passage</voie>
+            <postal>12345</postal>
+            <ville>Volgograd</ville>
+            <pays>Russie</pays>
+        </adresse>
+        <numeros> </numeros>
+            <fixe>01 02 03 04 05</fixe>
+            <portable>10 20 30 40 50</portable>
+        </numeros>
+    </personne>
+</repertoire>
+
+
+
+
+
+    Son sexe (homme ou femme).
+
+    Son nom.
+
+    Son prénom.
+
+    Son adresse.
+
+    Un ou plusieurs numéros de téléphone (téléphone portable, fixe, bureau, etc.).
+
+    Une ou plusieurs adresses e-mail (adresse personnelle, professionnelle, etc.).
+    
