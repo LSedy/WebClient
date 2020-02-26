@@ -1,13 +1,34 @@
-<header>
-haut quelque chose
-</header>
+?xml version = "1.0" encoding="UTF-8" standalone="yes" ?>
 
 
-<body>
-corps
-</body>
 
 
-<footer>
-bas
-</footer>
+<racine>
+    <header>
+
+        haut quelque chose
+        <?xml contenu ?>
+
+    </header>
+
+
+    <body class="light-chip win" style="--logo-color:rgba(238,238,238,1); background: rgb(255, 255, 255);">
+
+
+        <escape />
+        <prix devise="euro">25.3</prix>
+        <prix devise="euro" moyen_paiement="chèque">25.3</prix>
+
+        <!-- je suis un commentaire -->
+
+        <!-- deux type de balise existe; balise par paires + balise uniques - les balises peuvent contenir des attributs - un document XML peut contenir des commentaires -->
+
+    </body>
+
+
+    <footer>
+
+        bas
+
+    </footer>
+/racine>
