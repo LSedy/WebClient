@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!-- Exo Khalil Bouteille d'eau Cristaline  -->
+
+<bouwater>
+    <!-- 150cl St-Cyr la Source Loiret 3274080005003 pH7.45-->
+    <boucris type="Cristaline">
+        <specifi>
+            <litrage type="cl">150</litrage>
+            <PH>7.45</PH>
+            <codebarre>3274080005003</codebarre>
+            <anomalie type="particules">fer</anomalie>
+        </specifi>
+        <!-- location du lieu de la source/Departement-->
+        <localsour>
+            <locSource type="St-Cyr" />
+            <departement type="Loiret" />
+        </localsour>
+         <!-- ions positifs/negatifs-->
+         <ions>
+             <positifs>
+                 <calcium type="mg/l">71</calcium>
+                 <magnesium type="mg/l">5.5</magnesium>
+             </positifs>
+             <negatifs>
+                 <chlorures type="mg/l">20</chlorures>
+                 <nitrates type="mg/l">1</nitrates>
+             </negatifs>
+         </ions>
+    </boucris>
+    <!-- 50cl source d'Aurèle Alpes Maritimes 3268840001008 pH7.4 -->
+    <boucristal type="Cristaline">
+        <specifi>
+            <litrage type="cl">50</litrage>
+            <PH>7.4</PH>
+            <codebarre>3268840001008</codebarre>
+            <anomalie>N/C</anomalie>
+        </specifi>
+        <!-- location du lieu de la source/Departement-->
+        <localsour>
+            <locSource type="source d'Aurèle" />
+            <departement type="Alpes Maritimes" />
+        </localsour>
+         <!-- ions positifs/negatifs-->
+         <ions>
+             <positifs>
+                 <calcium type="mg/l">98</calcium>
+                 <magnesium type="mg/l">4</magnesium>
+             </positifs>
+             <negatifs>
+                 <chlorures type="mg/l">3.6</chlorures>
+                 <nitrates type="mg/l">2</nitrates>
+             </negatifs>
+         </ions>
+    </boucristal>
+    <!-- 50cl source de Volvic Auvergne 3057640117008 pH7 -->
+    <bouvolv type="Volvic">
+        <specifi>
+            <litrage type="cl">50</litrage>
+            <PH>7</PH>
+            <codebarre>3057640117008</codebarre>
+            <anomalie type="particules">silice</anomalie>
+        </specifi>
+        <!-- location du lieu de la source/Departement-->
+        <localsour>
+            <locSource type="source de Volvic" />
+            <departement type="Auvergne" />
+        </localsour>
+         <!-- ions positifs/negatifs-->
+         <ions>
+             <positifs>
+                 <calcium type="mg/l">11.5</calcium>
+                 <magnesium type="mg/l">8</magnesium>
+             </positifs>
+             <negatifs>
+                 <chlorures type="mg/l">13.5</chlorures>
+                 <nitrates type="mg/l">6.3</nitrates>
+             </negatifs>
+         </ions>
+    </bouvolv>
+</bouwater>
