@@ -1,15 +1,74 @@
 <!doctype html>
 <html lang="fr">
     <head>
+        <meta charset="UTF-8" />
         <title>Sommaire</title>
     </head>
     <!-- construction de la page-->
-    <body>
+    <body id="ancre_du_lien">
     <h1> Mon index, ou sommaire, apparemment!</h1>
     <p>Lien vers <a href="page1.html" title="ma 1ere page">PAGE1</a></p>
     <p>Lien vers <a href="page2.html" title="ma 2eme page">PAGE2</a></p>
-    <p>Lien vers <a href="page_interne/page3.html" title="ma 3eme page">PAGE3</a>dans un sous répertoire</p>
-    <a href="https://www.google.fr/" title="Moteur de recherche">GOOGLE</a>
+    <p>Lien vers <a href="page_interne/page3.html" title="ma 3eme page">PAGE3</a> dans un sous répertoire</p>
+    <p>Lien vers <a href="https://www.google.fr/" title="Moteur de recherche">GOOGLE</a> ne craignez rien, il a plus peur de vous que vous n'avez peur de lui</p>
+    <p>veuillez envoyez un mail a <a href="mailto:sedylaurent@gmail.com" title="AdresseMail">Adresse.Mail@Gmail.com</a> pour me contacter merci</p>
+    <p>veuillez nous contacter au numéro suivant <a href="tel:0630581712" title="numeromystérieux">Numéro Mystérieux</a> pour me contacter merci</p>
     
+
+    <!-- la balise <ul> permet de créeer une liste non ordonnée (unordered list). il faut l'oubrir en début de liste et la fermet après le dernier élément de la liste
+            la balise <li> permet de crrééer UN élément de la liste-->
+    <ul> 
+        <li>élément de liste 1</li>
+        <li>élément de liste 2</li>
+        <li>élément de liste 3</li>
+    </ul>
+
+    <!-- La balise <ol> permet de créer une liste ordonnée et numérotére (par défault dans le navigateur). 
+        il faut l'ouvrir en début d e liste et la ferlmet après le dernier élément de la liste
+            la balise <li> permet de créer UN élément de la liste-->
+    <ol>
+        <li>élément numéroté de liste 1</li>
+        <li>élément numéroté de liste 2</li>
+        <li>élément numéroté de liste 3</li>
+    </ol>
+        <!-- les éléments <ul> et <ol> ne oeyhvenbt contenir que des éléments <li> 
+            il peuvent aussi contenir des éléments de lbloc ou des élémetns incorporés (p,div,blockquote,h1,etc)-->
+    <ul>
+        <li>élément 1 de liste</li>
+        <li><h1>Mes films préférés</h1>
+            <ul>
+                <li>Hellraiser</li>
+                <li>Terminator</li>
+                <li>Casshern</li>
+            </ul>
+        </li>
+        <li>élément 3 de liste</li>
+    </ul>
+
+
+    <!-- Ouvrir un lien dans un nouvel onglet, le truc bien pénible, mais qui peut servir dans certain cas-->
+    <a href="index.html" target="_blank" />
+
+<!-- lies listes en pratique - les onglets-->
+
+<ul>
+        <li><a href="#home">Home</a>patate</li>
+        <li><a href="#profile">Profile</a>banane</li>
+
+    <li>    
+        <a href="#">Dropdown</a>
+        <ul>
+            <li><a href="#dropdown1">@fat</a>patatra</li>
+            <li><a href="#dropdown1">@fat</a>vradavlang</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+    <!--liens "internes" ou ancres internes-->
+    <a href="#ancre_du_lien">Ancre du lien!ah! cela ne ce voit pas, mais sa fonctionne!</a>
+
     </body>
 </html>
