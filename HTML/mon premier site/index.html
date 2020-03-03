@@ -2,6 +2,12 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <style>
+            td{
+                border: 1px crimson;
+            }
+        </style>
         <title>Sommaire</title>
     </head>
     <!-- construction de la page-->
@@ -64,11 +70,23 @@
     </li>
 </ul>
 
+    <!--Les formulaires servent a recuperer des données que l'utilisateur aentrer et les envoyer
+      au serveur pour un traitement(-en PHP par exemple): login, formulaire de contact et meme le chat de la fcebook -->
+    <!-- deux méthodes 
+    "get" information passées dans la barre d'adresse
+    "post" envoie les données dans le corps de la requête sans passer pare la barre d'adresse, c'est la metrhode la plus utlilisée
+    Action: l'adrese du fichier ou programme qui va teraitrer les données -->
 
+    <form method="POST" action="traitement.php" >
+        
+        <!-- contenu du formulaire -->
+
+    </form>
+
+    <input type="checkbox" id="jazz" name="jazz" >
 
 
     <!--liens "internes" ou ancres internes-->
     <a href="#ancre_du_lien">Ancre du lien!ah! cela ne ce voit pas, mais sa fonctionne!</a>
-
     </body>
 </html>

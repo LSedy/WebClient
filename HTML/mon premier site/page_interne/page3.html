@@ -2,10 +2,62 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
         <title>Page3</title>
+        <style>
+            td{
+                border: 1px crimson;
+            }
+        </style>
     </head>
 
     
     <h1>ma page interne</h1>
     <p> Retour a <a href="../index.html" title="accueil du site"> l'accueil</a></p>
+
+   
+    <h3>Créer un tableau</h3>
+
+    <h4>Mon tableau</h4> 
+    <table>
+        <caption>Prix du marché</caption>
+        <tr>
+            <td>l1</td>
+            <td>l2</td>
+            <td>l3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <!-- Fusion de cellules _il est possible de fuysionner certaines cellules entre elles avec l'attribut  colspan="nombredecellules" qui se palce sur al cellule (th ou td)-->
+    <table>
+        <tr>
+            <th colspan="3">titre</th>
+        </tr>
+        <tr>
+           <td>l2 c1</td>
+           <td>l2 c2</td>
+           <td>l2 c3</td>
+        </tr>
+    </table>
+
+    <!--Fusion de ligne _il est possible de fuisooner des lignes avec l'attriblut rowspan="onmbresdelignes" qui se place sur la cellule (th ou td)-->
+    <table>
+        <tr>
+            <td rowspan="2">l1 et 2 c1</td>
+            <td>l1 c2</td>
+            <td rowspan="3">l1,2,3 c3</td>
+        </tr>
+        <tr>
+            <td>l2 c2</td>
+        </tr>
+        <tr>
+            <td>l3 c1</td>
+            <td>l3 c2</td>
+        </tr>
+    </table>
 </html>  
