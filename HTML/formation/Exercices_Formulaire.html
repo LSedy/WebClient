@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <title>Formulaire</title>
+        <style>
+            td{
+                border: 5px solid rgb(199, 16, 16);
+            }
+        </style>
+    </head>
+
+    <!-- EXERCICE FORMULAIRE-->
+    
+    <h2>EXERCICE FORMULAIRE</h2>
+
+    <h2>Formulaire type</h2>
+    <h3>Coordonnées</h3>
+    <p><strong>Prenom</strong></p>
+    <input type="text">
+    <p><strong>Nom</strong></p>
+    <input type="text">
+    
+    <p>Je désire recevoir une documentation <input type="checkbox"></p>
+    
+    <p>
+        <label for="pays"><strong>Pays</strong></label>
+        <select name="pays" id="pays">
+            <option value="france">France</option>
+            <option value="norvège">Norvège</option>
+            <option value="russie">Russie</option>
+        </select>
+    </p>
+
+    <p><strong>Genre:</strong></p>
+    <input type="radio" name="Genre" value="M" id="M"/>
+    <label for="M">mâle</label>
+    <input type="radio" name="Genre" value="F" id="F" />
+    <label for="F">femelle</label>
+    <input type="radio" name="Genre" value="N" id="N" />
+    <label for="N">non-identifié</label>
+    <input type="radio" name="Genre" value="I" id="I" />
+    <label for="I">indécis</label>
+
+    <h3>Domaine d'activité</h3>
+    <p>Vous pouvez en choisir plusieurs. Il ne peut pas toujours n'en rester qu'un...</p>
+    <input type="checkbox" name="Pedagogie" value="ped" id="ped" />
+    <label for="ped">Pedagogie</label>
+    <input type="checkbox" name="Psychologie" value="psy" id="psy" />
+    <label for="psy">Psychologie</label>
+    <input type="checkbox" name="Informatique" value="inf" id="inf" />
+    <label for="inf">Informatique</label>
+    <input type="checkbox" name="Sorcelerie" value="sor" id="sor" />
+    <label for="sor">Sorcelerie</label>
+    <input type="checkbox" name="Autre" value="aut" id="aut" />
+    <label for="aut">Autre</label>
+
+    <h4><strong>Commentaire</strong></h4>
+    <p>Si vous le voulez, vous pouvez décrire vos activités ou interets</p>
+    <textarea width="450" height="300"></textarea>
+
+    <!-- bouton de reset et envoyer?-->
+   <p>voulez-vous <input type="reset" value="eraze" /> <input type="submit" value="disintegrate now" /> toute chose ici?</p>
+</html>  
