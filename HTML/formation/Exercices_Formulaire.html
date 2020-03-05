@@ -14,7 +14,7 @@
     <!-- EXERCICE FORMULAIRE-->
     
     <h2>EXERCICE FORMULAIRE</h2>
-
+<form>
     <h2>Formulaire type</h2>
     <h3>Coordonnées</h3>
     <p><strong>Prenom</strong></p>
@@ -51,16 +51,22 @@
     <label for="psy">Psychologie</label>
     <input type="checkbox" name="Informatique" value="inf" id="inf" />
     <label for="inf">Informatique</label>
-    <input type="checkbox" name="Sorcelerie" value="sor" id="sor" />
-    <label for="sor">Sorcelerie</label>
+    <input type="checkbox" name="Sorcellerie" value="sor" id="sor" />
+    <label for="sor">Sorcellerie</label>
     <input type="checkbox" name="Autre" value="aut" id="aut" />
     <label for="aut">Autre</label>
 
     <!--width="450" height="300" dans les styles si cela ne fonctionne pas-->
     <h4><strong>Commentaire</strong></h4>
     <p>Si vous le voulez, vous pouvez décrire vos activités ou interets</p>
+
+    <!-- textarea avec taille modifiable, recup sur openclassrooms.com-->
+    <textarea rows="15" cols="40" id="text"></textarea><br />
+    <input type="button" onclick="javascript:if(document.getElementById('text').rows == 15) return; document.getElementById('text').rows--;" value="-" /> Hauteur <input type="button" onclick="javascript:if(document.getElementById('text').rows == 30) return; document.getElementById('text').rows++;" value="+" />
+    <!-- textarea normal, sans modification et agrandi avec "cols" et "row"-->
     <textarea rows="20" cols="100" id="text"></textarea>
 
     <!-- bouton de reset et envoyer?-->
    <p>voulez-vous <input type="reset" value="eraze" /> <input type="submit" value="disintegrate now" /> toute chose ici?</p>
+</form>
 </html>
