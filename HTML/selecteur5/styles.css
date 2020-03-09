@@ -10,3 +10,9 @@ p.remarque {
 .remarque.important {
     color: indianred;
 }
+#patate {
+    color: indigo;
+}
+p#patate.important {
+    background-color: lightgreen;
+}
