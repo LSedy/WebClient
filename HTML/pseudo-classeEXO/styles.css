@@ -1,1 +1,25 @@
 /*cascading style sheet*/
+/*
+Le sélecteur a:link désigne les liens hypertextes non visités.
+ Le sélecteur a:visited désigne les liens hypertextes déjà visités
+ Le sélecteur a:hover désigne un lien survolé.
+ Le sélecteur a:active désigne un lien cliqué.
+ Pour retenir l’ordre : LoVe Hate : link, visited, hover, active
+*/
+
+ul {
+    list-style-type: none;
+}
+
+#goo {
+    color: blue;
+}
+#wik {
+    color: darkcyan;
+}
+#ope {
+    color: indianred;
+}
+#dev {
+    color: limegreen;
+}
