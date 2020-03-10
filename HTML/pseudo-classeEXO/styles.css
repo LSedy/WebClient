@@ -11,15 +11,21 @@ ul {
     list-style-type: none;
 }
 
-#goo {
-    color: blue;
+a {
+    color: crimson;
 }
-#wik {
-    color: darkcyan;
+h1:hover {
+    color: crimson;
 }
-#ope {
+a:link {
+    color: darkred;
+}
+a:visited {
+    background-color: gray;
+}
+a:active {
+    color: firebrick;
+}
+a:hover {
     color: indianred;
-}
-#dev {
-    color: limegreen;
 }
