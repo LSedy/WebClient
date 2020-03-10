@@ -1,5 +1,16 @@
-1/ selector universel sur tous les éléments (*)
-2/ selector sur les paragraphes qui suivent un titre
-3/ selector les liens qui suivent directement un paragraphe
-4/ selector sur tous les liens qui sont descendants d'une section
-5/ selector sur les paragraphes qui sont descendants direct d'une section
+*p {
+    color: darkcyan;
+}
+
+title.p {
+    background-color: steelblue;
+    }
+a p {
+    font-style: italic;
+    }
+a section {
+    background-color: indigo;
+    }
+section.p {
+    background-color: indianred;
+    }
