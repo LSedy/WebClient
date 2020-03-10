@@ -1,12 +1,12 @@
 p {
-    background-color: darkcyan;
+    color: darkcyan;
 }
 
 h1, h2, h3,h4, h5 p {
     background-color: steelblue;
     }
 a p {
-    background-color: limegreen;
+    color: limegreen;
     }
 a section {
     background-color: indigo;
