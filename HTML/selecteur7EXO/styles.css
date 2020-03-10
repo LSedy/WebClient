@@ -2,11 +2,11 @@
     color: darkcyan;
 }
 
-title.p {
+h2.p {
     background-color: steelblue;
     }
 a p {
-    font-style: italic;
+    background-color: limegreen;
     }
 a section {
     background-color: indigo;
