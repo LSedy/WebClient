@@ -1,0 +1,34 @@
+.top {
+    border: indianred;
+    background: crimson;
+    margin: 10px 5px 8px 15px;
+    height: 50px;
+    width: 50px;
+}
+.right {
+    border: indigo;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+}
+.bottom {
+    border: rebeccapurple;
+    margin: 15px;
+    height: 50px;
+    width: 50px;
+}
+.left {
+    border: ghostwhite;
+    background: mediumseagreen;
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+
+}
+.center {
+    border: lightslategray;
+    background: lightsteelblue;
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+}
