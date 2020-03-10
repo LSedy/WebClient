@@ -1,0 +1,22 @@
+.div1 {
+    background-color: crimson;
+    height: 150px;
+}
+.div2{
+    background-color: firebrick;
+    height: 150px;
+    width: 200px;
+}
+.div3 {
+    background-color: darkslategray;
+    height: 150px;
+    width: 50%;
+}
+.div4 {
+    background-color: gray;
+    height: 100px;
+    width: 50%;
+}
+*{
+    background: rgba(238, 238, 238, 0.322);
+}
