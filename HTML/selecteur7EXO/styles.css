@@ -1,44 +1,5 @@
-html
-head
-body
-header
-	h1
-	div
-		p
-		p
-			a
-		bloquote
-			span
-		p
-			strong
-				a
-	h2
-		a
-	p
-		a
-	p
-		bloquote
-		a
-section
-	h2
-	p
-		a
-	p
-		div
-			p
-			a
-section
-	h3
-	p
-		a
-	p
-		a
-section
-	h4
-	p
-	p
-footer
-	div
-		p
-		p
-		h5
+1/ selector universel sur tous les éléments (*)
+2/ selector sur les paragraphes qui suivent un titre
+3/ selector les liens qui suivent directement un paragraphe
+4/ selector sur tous les liens qui sont descendants d'une section
+5/ selector sur les paragraphes qui sont descendants direct d'une section
