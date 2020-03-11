@@ -1,0 +1,23 @@
+header {
+    background-color: darkgray ;
+    padding-top: 10px;
+    padding-bottom: 22px;
+}
+.contenu {
+    background-color: darkgreen;
+    height: 500px;
+    float: left;
+    width: 80%;
+}
+.side {
+    background-color: darkseagreen;
+    height: 500px;
+    float: left;
+    width: 20%;
+}
+.footer {
+    background-color: mediumseagreen;
+    height: 100px;
+    float: none;
+    clear: both;
+}
