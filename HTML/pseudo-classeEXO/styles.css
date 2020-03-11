@@ -7,12 +7,15 @@ Le sélecteur a:link désigne les liens hypertextes non visités.
  Pour retenir l’ordre : LoVe Hate : link, visited, hover, active
 */
 
-ul {
+ul li {
     list-style-type: none;
+    display: inline-block;
 }
 
-a {
+ul li a {
     color: crimson;
+    display: block;
+    padding: 9px;
 }
 h1:hover {
     color: crimson;
@@ -20,12 +23,29 @@ h1:hover {
 a:link {
     color: darkred;
 }
-a:visited {
+/*a:visited {
     background-color: gray;
-}
+}*/
 a:active {
     color: firebrick;
 }
 a:hover {
     color: indianred;
+}
+.goo {
+    
+    background-color:lightsteelblue;
+    text-align: left;
+}
+.wik {
+
+    background-color: lightyellow;
+}
+.ope {
+
+    background-color: lime;
+}
+.dev {
+
+    background-color: limegreen;
 }
