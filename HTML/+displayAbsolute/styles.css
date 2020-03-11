@@ -1,0 +1,14 @@
+.div1{
+    width: 500px;
+    height: 500px;
+    background-color: mediumaquamarine;
+    position: relative;
+    top: 500px;
+}
+.div2 {
+    width: 200px;
+    height: 200px;
+    background-color: mediumseagreen;
+    position: absolute;
+    left: 30px;
+}
