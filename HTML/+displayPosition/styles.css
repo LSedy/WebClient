@@ -1,12 +1,16 @@
 p {
-    border: 1px solid black;
+    border: 2px solid black;
     width: 200px;
     position: relative;
     left: 50px;
     top: 50px;
 }
 .fix {
+    border: 2px solid crimson;
+    width: 200px;
     position: fixed;
-    left: 100px;
-    background-color: mediumaquamarine;
+    left: 58px;
+    top: 45px;
+    background-color: indianred;
+    color: silver;
 }
