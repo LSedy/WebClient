@@ -69,18 +69,26 @@ ul li a:hover {
 }
 /*MISE EN FORME HEADER*/
 .travel {
-
+    margin-left: 5%;
 }
-.nav menu {
-
+.navmenu {
+    margin-right: 5%;
 }
 /*MISE EN FORME MAIN & BLOCK*/
 .main {
-
+    vertical-align: middle;
 }
 .maintext {
-
+    vertical-align: middle;
 }
 .mainblock {
-    
+    vertical-align: middle;
+}
+.textmenu {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 300px;
+    background-color: rgba(0, 128, 128, 0.205);
 }
