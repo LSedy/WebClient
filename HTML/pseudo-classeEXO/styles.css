@@ -9,13 +9,13 @@ Le sélecteur a:link désigne les liens hypertextes non visités.
 
 ul li {
     list-style-type: none;
-    display: inline-block;
+    display: inline-block; 
 }
 
 ul li a {
     color: crimson;
     display: block;
-    padding: 9px;
+    padding: 9px;  
 }
 h1:hover {
     color: crimson;
