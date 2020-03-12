@@ -2,6 +2,9 @@
 ul li {
     list-style-type: none;
     display: inline-block;
+    white-space: nowrap;
+    font-size: none;
+    vertical-align: middle;
 
 }
 ul li a:hover {
