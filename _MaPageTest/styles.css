@@ -1,0 +1,14 @@
+/*HEADER SECTION ET FOOTER*/
+header, section, footer {
+    width: 960px;
+    margin: auto;
+    background: rgb(243, 243, 243);
+}
+
+/* CORPS DE PAGE & NAVIGATION*/
+body {
+    width: 960px;
+}
+nav {
+    padding: 15 px;
+}
