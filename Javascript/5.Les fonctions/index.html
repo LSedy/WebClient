@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FontionsJavascript</title>
+</head>
+<script src="jfoncs.js"></script>
+<body>
+    <h1>Les fonctions JavaScript</h1>
+    <p>Il y a les fonctions ou variables natives (déjà existantes), mais on peut aussi en créer
+        de nouvelles, selon la structure suivante :</p>
+    <script>
+        function myFunction(arguments) { // Le terme "function" est obligatoire pour déclarer une fonction
+            // Le code que la fonction va devoir exécuter
+    }</script>
+    // par exemple:
+    <script>
+    function byTwo() {
+    var result = parseInt(prompt('Donnez le nombre à multiplier par 2 :'));
+    alert(result * 2); }
+    byTwo(); // On appelle la fonction créée
+    alert('Vous en êtes à la moitié !'); // Puis un message intermédiaire
+    byTwo(); // Et appelle de nouveau la fonction </script>
+
+    //  6.1. Les variables locales et globales
+    // Attention : toute variable déclarée dans une fonction n'est utilisable que dans cettemême fonction. Ces variables spécifiques à une seule fonction ont un nom : les variableslocales. Déclarées en dehors des fonction, on parle de variables globales.
+    <script>
+        var message = 'Ici la variable globale !';
+        function showMsg() {
+        var message = 'Ici la variable locale !';
+        alert(message); }
+        showMsg(); // On affiche la variable locale
+        alert(message); // Puis la variable globale
+    </script>
+
+    //  6.2. Les arguments
+    <script>
+        function myFunction(arg) { // Notre argument est la variable « arg »
+        alert('Votre argument : ' + arg); }
+        myFunction('En voilà un beau test !'); 
+    </script>
+    //  Ou
+    <script>
+        function myFunction(arg) {
+        alert('Votre argument : ' + arg); }
+        myFunction(prompt('Que souhaitez-vous passer en argument à la fonction ?'));
+    </script>
+    //  Ou encore avec des arguments multiples :
+    <script>
+    function moar(first, second) {
+    // On peut maintenant utiliser les variables « first » et « second » comme on le souhaite :
+        alert('Votre premier argument : ' + first);
+        alert('Votre deuxième argument : ' + second);
+    }
+        moar(
+        prompt('Entrez votre premier argument :'),
+        prompt('Entrez votre deuxième argument :')
+    ); </script>
+
+    // 6.3. Les valeurs de retour
+    <script>
+        function sayHello() {
+        return 'Bonjour !'; // L'instruction « return » suivie d'une valeur, cette dernière est donc renvoyée par la fonction (il ne peut pas y en avoir d'autres)
+        }
+        alert(sayHello());
+    </script>
+
+    //  6.4. Les fonctions anonymes (bases)
+    // Une fonction anonyme peut être utilisée, entre autres, par le biais d'une variable :
+    <script>
+        var sayHello = function() {
+        alert('Bonjour !');
+        };
+        sayHello(); 
+    </script>
+
+
+</body>
+</html>

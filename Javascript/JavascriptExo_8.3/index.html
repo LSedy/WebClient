@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ExercicesJavascript4.3</title>
+</head>
+<script src="oni.js"></script>
+<body>
+    <h1></h1>
+    <script>
+var nicks = '', nick;
+while (true) {
+nick = prompt('Entrez un prénom :');
+if (nick) {
+nicks += nick + ' '; // Ajoute le nouveau prénom ainsi qu'un espace
+} else {
+break; // On quitte la boucle
+}
+}
+alert(nicks); // Affiche les prénoms à la suite
+    </script>
+    <p>Appuyer sur F5 pour relancer la page, si le coeur vous en dit!</p>
+</body>
+</html>

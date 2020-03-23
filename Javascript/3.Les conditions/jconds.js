@@ -1,0 +1,1 @@
+alert ('conditions javascript!');

@@ -1,0 +1,1 @@
+alert ('objets & tableaux javascript!');

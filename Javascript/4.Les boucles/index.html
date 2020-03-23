@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BouclesJavascript</title>
+</head>
+<script src="jbou.js"></script>
+<body>
+    <h1>Les boucles JavaScript</h1>
+    <p></p>
+
+    <!--5.1. Incrémentation et décrémentation-->
+    <!--L'incrémentation permet d'ajouter une unité à un nombre au moyen d'une syntaxe
+courte. À l'inverse, la décrémentation permet de soustraire une unité.-->
+    <script>
+        var number = 0;
+        number++;
+        alert(number); // Affiche : « 1 »
+        number--;
+        alert(number); // Affiche : « 0 »
+    </script>
+
+    <!--5.2. La boucle while-->
+    <script>
+        while (condition) {
+        instruction_1; instruction_2; instruction_3;
+    } </script>
+    <!--Quand la boucle s'arrête, les instructions qui suivent la boucle sont executées :-->
+    <script>
+        var number = 1;
+        while (number < 10) {
+        number++; // Tant que le nombre est inférieur à 10, on l'incrémente de 1
+        }
+        alert(number); // Affiche : « 10 » </script>
+    // Un exemple avec prompt() et break
+    <script>
+    var prenoms = '', prenom; // On crée une variable prenoms pour mémoriser
+    while (true) {
+    prenom = prompt('Entrez un prénom :'); // L'utilisateur entre chaque prenom
+    if (prenom) {
+    prenoms += prenom + ' '; // Ajoute le nouveau prénom ainsi qu'une espace
+    } else {
+    break; // On quitte la boucle
+    }
+    } alert(prenoms); // Affiche les prénoms à la suite </script>
+////////////////////////    
+    // 5.3. La boucle do while (peu utile)
+    //Dans ce cas, la boucle est executée au moins une fois, après quoi on teste la condition, selon la structure suivante :
+    <script>
+    do {
+    instruction_1; instruction_2; instruction_3;
+    } while (condition);
+    </script>
+////////////////////////
+    // 5.4. La boucle for (très utile)
+    //Cette boucle est très utile pour l'incrémentation automatique :
+    <script>
+    for (initialisation; condition; incrémentation) {
+        instruction_1;
+        instruction_2;
+        instruction_3;
+    } </script>
+    // Par exemple :
+    <script>
+    for (var iter = 1; iter <= 5; iter++) { // On initialise une variable, et tant qu'elle est inférieure ou égale à 5 on l'incrémente de 1.
+    alert ('Itération n°' + iter); // A chaque fois on affiche une boîte de dialogue (5 fois)
+    } </script>
+    // Et avec les prénoms
+    <script>
+        for (var prenoms = '', prenom; true;) { // ici sans incrémentation nécessaire,mais avec un point-virgule obligatoire après la condition true
+        prenom = prompt('Entrez un prénom :');
+        if (prenom) { prenoms += prenom + ' '; }
+        else { break; } }
+        alert(prenoms);
+    </script>
+    // Mais on peut se servir de l'incrémentation pour compter le nombre de prénoms
+    <script>
+    for (var i = 0, prenoms = '', prenom; true; i++) {
+    prenom = prompt('Entrez un prénom :');
+    if (prenom) { prenoms += prenom + ' '; }
+    else { break; } }
+    alert('Il y a ' + i + ' prénoms :\n\n' + prenoms); // Les \n servent à faire des sauts de ligne
+    </script>
+</body>
+</html>

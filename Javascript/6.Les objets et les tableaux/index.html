@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Objets&TableauxJavascript</title>
+</head>
+<script src="jobjtab.js"></script>
+<body>
+    <h1>Les Les objets et les tableaux JavaScript</h1>
+    <p>Les variables contiennent des objets, qui peuvent être des nombres, des chaînes de
+        caractères ou des booléens. Mais le Javascript n'est pas un langage orienté objet (C++,
+        C# ou Java), mais un langage orienté objet par prototype.
+        Les variables contiennent des objets, qui peuvent être des nombres, des chaînes de
+        caractères ou des booléens. Mais le Javascript n'est pas un langage orienté objet (C++,
+        C# ou Java), mais un langage orienté objet par prototype.</p>
+    <!--7.1. Les objets-->
+    <script>
+        var myString = 'Ceci est une chaîne de caractères'; // On crée un objet String
+        alert(myString.length); // On affiche le nombre de caractères, au moyen de la propriété « length »
+        alert(myString.toUpperCase()); // On récupère la chaîne en majuscules, avec la méthode toUpperCase(), l'inverse étant la méthode toLowerCase()
+    </script>
+
+    <!--7.2. Les tableaux-->
+    <!--
+            Après Number, String et Boolean, Array est un 4e objet natif de Javascript.
+            Un tableau, ou plutôt un array en anglais, est une variable qui contient plusieurs
+            valeurs, appelées items. Chaque item est accessible au moyen d'un indice (index en
+            anglais) et dont la numérotation commence à partir de 0.
+    -->
+    <script>
+        var myArray = ['Rafael', 'Mathilde', 'Ahmed', 'Jérôme', 'Guillaume'];
+        // Le contenu se définit entre crochets, avec une virgule entre chaque valeur.
+        // La chaîne 'Rafael' correspond à l'indice 0, 'Mathilde' à l'indice 1...
+        alert(myArray[1]); // Affiche : « Laurence »
+    </script>
+    <!--On peut modifier une valeur :-->
+    <script>
+        var myArray = ['Rafael', 'Mathilde', 'Ahmed', 'Jérôme', 'Guillaume'];
+        myArray[1] = 'Paul';
+        alert(myArray[1]); //Affiche : « Paul »
+    </script>
+
+    <!--7.3. Opérations sur les tableaux-->
+    <script>
+        var myArray = ['Rafael', 'Mathilde'];
+        myArray.push('Ahmed');                // Ajoute « Ahmed » à la fin du tableau
+        myArray.push('Jérôme', 'Guillaume'); // Ajoute « Jérôme » et « Guillaume » à la fin du tableau
+    </script>
+        <!--La méthode unshift() fonctionne comme push(), excepté que les items sont ajoutés
+        au début du tableau. Les méthodes shift() et pop() retirent respectivement le premier
+        et le dernier élément du tableau.-->
+    <script>
+        var myArray = ['Rafael', 'Mathilde', 'Ahmed', 'Jérôme', 'Guillaume'];
+        myArray.shift(); // Retire « Rafael »
+        myArray.pop(); // Retire « Guillaume »
+        alert(myArray); // Affiche « Mathilde,Ahmed,Jérôme »
+    </script>
+    <!--On peut découper une chaîne de caractères en tableau avec split()-->
+    <script>
+        var cousinsString = 'Jérôme Guillaume Paul',
+        cousinsArray = cousinsString.split(' '); // Avec les espaces, on a trois items
+        alert(cousinsString);
+        alert(cousinsArray);
+    </script>
+    <!--On fait l'inverse avec join() :-->
+    <script>
+        var cousinsString_2 = cousinsArray.join('-');
+        alert(cousinsString_2); </script>
+    
+    <!--7.4. Parcourir un tableau-->
+    <script>
+        var myArray = ['Rafael', 'Mathilde', 'Ahmed', 'Jérôme', 'Guillaume']; // Lalength est de 5
+        for (var i = 0, c = myArray.length; i < c; i++) { // On crée la variable c pour que la condition ne soit pas trop lourde en caractères
+        alert(myArray[i]); // On affiche chaque item, l'un après l'autre, jusqu'à la longueur totale du tableau
+        }
+    </script>
+
+    <!--8.1. Les objets littéraux-->
+    <!--
+            On peut remplacer l'indice par un identifiant. Dans ce cas on crée un objet (dans
+            l'exemple family). Les identifiants créés (self, sister...) sont des propriétés, avec plusieurs
+            possibilités d'affichage (ce qui convient à toutes les propriétés, également pour length
+            par exemple). On peut ajouter des données (avec une méthode différente que pour un
+            tableau).
+    -->
+    <script>
+        var family = {
+        self: 'Rafael',
+        sister: 'Mathilde',
+        brother: 'Ahmed',
+        cousin_1: 'Jérôme',
+        cousin_2: 'Guillaume'
+        };
+        var id = 'sister';
+        alert(family[id]); // Affiche : « Mathilde »
+        alert(family.brother); // Affiche : « Ahmed »
+        alert(family['self']); // Affiche : « Rafael »
+        family['uncle'] = 'Pauline'; // On ajoute une donnée, avec un identifiant.
+        family.aunt = 'Karim'; // On peut ajouter aussi de cette manière.
+        alert(family.uncle); 
+    </script>
+
+    <!--8.2. Parcourir un objet avec for in-->
+    <script>
+        var family = {
+        self: 'Rafael',
+        sister: 'Mathilde',
+        brother: 'Ahmed',
+        cousin_1: 'Jérôme',
+        cousin_2: 'Guillaume'
+        };
+        for (var id in family) { // On stocke l'identifiant dans « id » pour parcourir l'objet « family »
+        alert(family[id]);
+        } </script>
+</body>
+</html>
