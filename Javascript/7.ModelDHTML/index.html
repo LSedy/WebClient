@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert('Hello world !');
+        window.alert('Hello world !');
+    </script>
+    <!--L'objet document est un sous-objet de window. L'objet document possède trois méthodes
+principales : getElementById(), getElementsByTagName() et getElementsByName().
+Avec getElementById() :-->
+    <div id="myDiv">
+        <p>Un peu de texte <a>et un lien</a></p>
+    </div>
+    <script>
+        var div = document.getElementById('myDiv');
+        alert(div); </script>
+    <!--Avec getElementsByTagName(), on récupère les éléments sous forme de tableau :-->
+    <script>
+        var divs = document.getElementsByTagName('div');
+        for (var i = 0, c = divs.length; i < c; i++) {
+            alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
+        } </script>
+    <!--On peut aussi utiliser querySelector(), qui renvoie le premier élément trouvé correspondant
+au sélecteur CSS spécifié, ou querySelectorAll(), qui renvoie tous les éléments (sous forme de
+tableau) correspondant au sélecteur CSS spécifié entre parenthèses :-->
+    <div id="menu">
+        <div class="item"><span>Élément 1</span><span>Élément 2</span></div>
+        <div class="publicite"><span>Élément 3</span><span>Élément 4</span></div>
+    </div>
+    <div id="contenu"><span>Introduction au contenu de la page...</span></div>
+    <script>
+        var query = document.querySelector('#menu .item span'),
+            queryAll = document.querySelectorAll('#menu .item span');
+        alert(query.innerHTML); // Affiche : "Élément 1"
+        alert(queryAll.length); // Affiche : "2"
+        alert(queryAll[0].innerHTML + ' - ' + queryAll[1].innerHTML); </script>
+    <!--On peut jouer sur les attributs d'une balise HTML avec l'objet Element et getAttribute() et
+setAttribute(), permettant par exemple de modifier un lien :-->
+    <a id="myLink" href="http://www.un_lien_quelconque.com">Un lien modifié
+        dynamiquement</a>
+    <script>
+        var link = document.getElementById('myLink');
+        var href = link.getAttribute('href'); // On récupère l'attribut « href »
+        alert(href);
+        link.setAttribute('href', 'http://blog.crdp-versailles.fr/rimbaud/'); // on édite
+    </script>
+    <!--Cela fonctionne aussi avec :-->
+    <a id="myLink" href="http://www.un_lien_quelconque.com">Un lien modifié
+        dynamiquement</a>
+    <script>
+        var link = document.getElementById('myLink');
+        var href = link.href;
+        alert(href);
+        link.href = 'http://www.clg-rimbaud-aubergenville.ac-versailles.fr/';
+    </script>
+    <!--innerHTML permet de récupérer le code HTML enfant d'un élément en texte :-->
+    <div id="myDiv">
+        <p>Un peu de texte <a>et un lien</a></p>
+    </div>
+    <script>
+        var div = document.getElementById('myDiv');
+        alert(div.innerHTML);
+    </script>
+    <!--On peut alors définir un nouveau contenu :-->
+    document.getElementById('myDiv').innerHTML = '<blockquote>Je mets une citation à la
+        place du paragraphe</blockquote>';
+    <!--Ou encore ajouter un contenu à celui qui est en place (à éviter dans une boucle) :-->
+    document.getElementById('myDiv').innerHTML += ' et <strong>une portion mise en
+        emphase</strong>.';
+
+    <!--/////////////////////10\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <!--La propriété parentNode permet d'accéder à l'élément parent d'un élément :-->
+    <blockquote>
+        <p id="myP">Ceci est un paragraphe !</p>
+    </blockquote>
+    <script>
+        var paragraph = document.getElementById('myP');
+        var blockquote = paragraph.parentNode;
+    </script>
+    <!--nodeType et nodeName permettent de vérifier le type et le nom d'un noeud :-->
+    var paragraph = document.getElementById('myP');
+    alert(paragraph.nodeType + '\n\n' +
+    paragraph.nodeName.toLowerCase());
+    <!--firstChild et lastChild permettent d'accéder au premier et au dernier élément
+d'un noeud :-->
+    <div>
+        <p id="myP">Un peu de texte, <a>un lien</a> et <strong>une portion en
+                emphase</strong></p>
+    </div>
+    <script>
+        var paragraph = document.getElementById('myP');
+        var first = paragraph.firstChild;
+        var last = paragraph.lastChild;
+        alert(first.nodeName.toLowerCase());
+        alert(last.nodeName.toLowerCase());
+    </script>
+    <!--Ou encore avec :-->
+    var paragraph = document.getElementById('myP');
+    var first = paragraph.firstChild;
+    var last = paragraph.lastChild;
+    alert(first.nodeValue);
+    alert(last.firstChild.data);
+    <!--childNodes retourne un tableau contenant la liste des enfants d'un élément.-->
+    <!--nextSibling et previousSibling permettent d'accéder à l'élément suivant, et au
+    précédent :-->
+    <div>
+        <p id="myP">Un peu de texte, <a>un lien</a> et <strong>une portion en
+                emphase</strong></p>
+    </div>
+    <script>
+        var paragraph = document.getElementById('myP');
+        var first = paragraph.firstChild;
+        var next = first.nextSibling;
+        alert(next.firstChild.data); // Affiche « un lien »
+    </script>
+    <!--Ou-->
+    <div>
+        <p id="myP">Un peu de texte <a>et un lien</a></p>
+    </div>
+    <script>
+        var paragraph = document.getElementById('myP');
+        var child = paragraph.lastChild; // On prend le dernier enfant
+        while (child) {
+            if (child.nodeType === 1) { // C'est un élément HTML
+                alert(child.firstChild.data);
+            } else { // C'est certainement un noeud textuel
+                alert(child.data);
+            }
+            child = child.previousSibling; // À chaque tour de boucle, on prend l'enfant précédent
+        }
+    </script>
+    <!--Attention ! Les espaces et retours à la ligne effectués dans le code HTML sont
+    généralement considérés comme des noeuds textuels par les navigateurs. On utilise alors
+    firstElementChild, lastElementChild, nextElementSibling et
+    previousElementSibling, non supportés par IE8 et inférieur.
+    Fiche-->
+
+    <!--/////////////////////11\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <!--11.1. Créer et insérer des éléments-->
+    var newLink = document.createElement('a');
+    <!--Affectation d'attributs-->
+    newLink.id = 'sdz_link';
+    newLink.href = 'http://blog.crdp-versailles.fr/rimbaud/';
+    newLink.title = 'Découvrez le blog de la Classe Actu !';
+    newLink.setAttribute('tabindex', '10');
+    <!--Insertion dans le document-->
+    <div>
+        <p id="myP">Un peu de texte <a>et un lien</a></p>
+    </div>
+    <script>
+        var newLink = document.createElement('a');
+        newLink.id = 'sdz_link';
+        newLink.href = 'http://blog.crdp-versailles.fr/rimbaud/';
+        newLink.title = 'Découvrez le blog de la Classe Actu !';
+        newLink.setAttribute('tabindex', '10');
+        document.getElementById('myP').appendChild(newLink); // le nouvel élément est le dernier enfant dans le paragraphe avec id 'myP'
+        var newLinkText = document.createTextNode("Le Tonnerre de Rimbaud");
+        newLink.appendChild(newLinkText); // ces deux lignes pour ajouter le texte
+    </script>
+
+    <!--11.2. Cloner, remplacer, supprimer-->
+    <div>
+        <p id="myP">Un peu de texte <a>et un lien</a></p>
+    </div>
+    <script>
+        var link = document.getElementsByTagName('a')[0];
+        var newLabel = document.createTextNode('et un hyperlien');
+        link.replaceChild(newLabel, link.firstChild);
+    </script>
+
+    <!--Pour supprimer un élément, on utilise removeChild(), avec le noeud enfant à retirer :-->
+    var link = document.getElementsByTagName('a')[0];
+    link.parentNode.removeChild(link);
+    <!--Pour vérifier la présence d'éléments enfant, on utilise hasChildNodes() : -->
+    <div>
+        <p id="myP">Un peu de texte <a>et un lien</a></p>
+    </div>
+    <script>
+        var paragraph = document.getElementsByTagName('p')[0];
+        alert(paragraph.hasChildNodes()); // Affiche true
+    </script>
+    <!--Pour insérer un élément avant un autre, on utilise insertBefore() :-->
+    <p id="myP">Un peu de texte <a>et un lien</a></p>
+    <script>
+        var paragraph = document.getElementsByTagName('p')[0];
+        var emphasis = document.createElement('em'),
+            emphasisText = document.createTextNode(' en emphase légère ');
+        emphasis.appendChild(emphasisText);
+        paragraph.insertBefore(emphasis, paragraph.lastChild);
+    </script>
+</body>
+
+</html>
